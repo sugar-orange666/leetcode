@@ -30,7 +30,8 @@ public class No90 {
         }
 
         for (int i = startIndex; i < nums.length; i++) {
-            //注意这里 use[i-1]=false，说明前面已经回溯完了，当前是层级遍历 use[i]=true，说明是深度遍历
+            //注意这里 use[i-1]=false，说明前面已经回溯完了，当前是层级遍历
+            // use[i]=true，说明是深度遍历
             if (i != 0 && nums[i - 1] == nums[i] && !used[i - 1]) {
                 continue;
             }
