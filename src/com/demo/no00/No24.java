@@ -15,12 +15,14 @@ public class No24 {
         dummyNode.next = head;
         ListNode pre = dummyNode;
         while (pre.next != null && pre.next.next != null) {
-            ListNode next = pre.next;
-            pre.next = pre.next.next;
-            next.next = pre.next.next;
-            pre.next.next = next;
+            ListNode temp = head.next.next;
+            pre.next = head.next;
+            head.next.next = head;
+            head.next = temp;
 
-            pre = next;
+
+            pre = head;
+            head = head.next;
 
         }
         return dummyNode.next;
