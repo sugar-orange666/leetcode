@@ -2,37 +2,33 @@ package com.demo.no01;
 
 import com.common.TreeNode;
 
-public class No104_1 {
-    int maxDepth;
+import java.util.Deque;
+import java.util.LinkedList;
 
+public class No104_1 {
     public int maxDepth(TreeNode root) {
-        maxDepth = 0;
+        int maxDepth = 0;
+        Deque<TreeNode> deque = new LinkedList<>();
         if (root == null) {
-            return maxDepth;
+            return 0;
         }
-        getDepth(root, 1);
+        deque.addLast(root);
+
+        while (!deque.isEmpty()) {
+            maxDepth++;
+            int size = deque.size();
+
+            for (int i = 0; i < size; i++) {
+                TreeNode pop = deque.pop();
+                if (pop.left != null) {
+                    deque.addLast(pop.left);
+                }
+                if (pop.right != null) {
+                    deque.addLast(pop.right);
+                }
+            }
+
+        }
         return maxDepth;
     }
-
-    public void getDepth(TreeNode root, int curDepth) {
-        maxDepth = Math.max(maxDepth, curDepth);
-        if (root.left == null && root.right == null) {
-            return;
-        }
-
-        if (root.left != null) {
-            curDepth++;
-            getDepth(root.left, curDepth);
-            curDepth--;
-        }
-
-        if (root.right != null) {
-            curDepth++;
-            getDepth(root.right, curDepth);
-            curDepth--;
-        }
-        return;
-    }
-
-
 }
