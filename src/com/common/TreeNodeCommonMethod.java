@@ -1,5 +1,7 @@
 package com.common;
 
+import com.demo.no01.No106;
+
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -34,5 +36,16 @@ public class TreeNodeCommonMethod {
         }
         return res;
 
+    }
+
+    /**
+     * 中序和后序构造二叉树
+     * @param inorder 中序
+     * @param postorder 后序
+     * @return 树的根节点
+     */
+    public static TreeNode buildTree(int[] inorder, int[] postorder) {
+        No106 no106 = new No106();
+        return no106.buildTree(inorder, postorder);
     }
 }
