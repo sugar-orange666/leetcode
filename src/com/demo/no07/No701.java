@@ -4,6 +4,9 @@ import com.common.TreeNode;
 
 import java.util.List;
 
+/**
+ * 701. 二叉搜索树中的插入操作
+ */
 public class No701 {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
