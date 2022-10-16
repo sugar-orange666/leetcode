@@ -1,5 +1,8 @@
 package com.demo.no03;
 
+/**
+ * 367. 有效的完全平方数
+ */
 public class No367 {
     public boolean isPerfectSquare(int num) {
         int left = 1, right = num;
