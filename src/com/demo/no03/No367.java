@@ -9,9 +9,10 @@ public class No367 {
         int mid;
         while (left <= right) {
             mid = left + (right - left) / 2;
-            if ((long) mid * mid == num) {
+            long temp = (long) mid * mid;
+            if (temp == num) {
                 return true;
-            } else if (mid < num / mid) {
+            } else if (temp < num) {
                 left = mid + 1;
             } else {
                 right = mid - 1;
