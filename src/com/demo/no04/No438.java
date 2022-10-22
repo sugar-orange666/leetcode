@@ -26,9 +26,23 @@ public class No438 {
         int start = 0;
         HashMap<Character, Integer> sMap = new HashMap<>();
         for (int end = 0; end < s.length(); ) {
+
             while ((end - start + 1) <= p.length()) {
-                sMap.put(s.charAt(end), sMap.getOrDefault(s.charAt(end), 0) + 1);
-                end++;
+
+                //如果不包含
+                if (end<s.length()&&!pMap.containsKey(s.charAt(end))) {
+                    sMap.clear();
+                    end++;
+                    start = end;
+                    if (end >= s.length()) {
+                        break;
+                    }
+                }else {
+                    System.out.println("end:"+end+"start:"+start);
+                    sMap.put(s.charAt(end), sMap.getOrDefault(s.charAt(end), 0) + 1);
+                    end++;
+                }
+
             }
             if (isSameHashMap(sMap, pMap)) {
                 list.add(start);
@@ -62,8 +76,8 @@ public class No438 {
 //        HashMap<Character, Integer> b = new HashMap<>();
 //        b.put('a', 2);
 //        System.out.println(no438.isSameHashMap(a, b));
-//        List<Integer> anagrams = no438.findAnagrams("cbaebabacd", "abc");
-        List<Integer> anagrams = no438.findAnagrams("abab", "ab");
+        List<Integer> anagrams = no438.findAnagrams("cbaebabacd", "abc");
+//        List<Integer> anagrams = no438.findAnagrams("abab", "ab");
         System.out.println(anagrams);
 
     }
