@@ -26,23 +26,9 @@ public class No438 {
         int start = 0;
         HashMap<Character, Integer> sMap = new HashMap<>();
         for (int end = 0; end < s.length(); ) {
-
             while ((end - start + 1) <= p.length()) {
-
-                //如果不包含
-                if (end<s.length()&&!pMap.containsKey(s.charAt(end))) {
-                    sMap.clear();
-                    end++;
-                    start = end;
-                    if (end >= s.length()) {
-                        break;
-                    }
-                }else {
-                    System.out.println("end:"+end+"start:"+start);
-                    sMap.put(s.charAt(end), sMap.getOrDefault(s.charAt(end), 0) + 1);
-                    end++;
-                }
-
+                sMap.put(s.charAt(end), sMap.getOrDefault(s.charAt(end), 0) + 1);
+                end++;
             }
             if (isSameHashMap(sMap, pMap)) {
                 list.add(start);
