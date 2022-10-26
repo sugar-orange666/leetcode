@@ -53,9 +53,10 @@ public class No28 {
 
     public static void main(String[] args) {
         No28 no28 = new No28();
-//        int[] next = no28.getNext("aabaabaaa");
 //        int i = no28.strStr("abcxabcdabxabcdabcdabcy", "abcdabcy");
-        int i = no28.strStr("sadbutsad", "sad");
-        System.out.println(i);
+//        int i = no28.strStr("sadbutsad", "sad");
+//        System.out.println(i);
+        int[] next = no28.getNext("abaababaab");
+        System.out.println(Arrays.toString(next));
     }
 }
