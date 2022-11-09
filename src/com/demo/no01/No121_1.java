@@ -3,7 +3,7 @@ package com.demo.no01;
 import java.util.Arrays;
 
 /**
- * 122. 买卖股票的最佳时机 II
+ * 121. 买卖股票的最佳时机 I
  */
 public class No121_1 {
     public int maxProfit(int[] prices) {
