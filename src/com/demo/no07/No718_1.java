@@ -1,7 +1,5 @@
 package com.demo.no07;
 
-import com.common.ArrayCommon;
-
 import java.util.Arrays;
 
 /**

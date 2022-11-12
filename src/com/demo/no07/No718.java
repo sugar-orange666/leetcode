@@ -1,9 +1,5 @@
 package com.demo.no07;
 
-import com.common.ArrayCommon;
-
-import java.util.Arrays;
-
 /**
  * 718. 最长重复子数组
  */

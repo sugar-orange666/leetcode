@@ -1,6 +1,6 @@
 package com.common;
 
-public class ArrayCommon {
+public class CommonArray {
     /**
      * 二维数组输出
      *
