@@ -23,21 +23,13 @@ public class No21 {
         ListNode cur2 = list2;
         while (cur1 != null && cur2 != null) {
             if (cur1.val <= cur2.val) {
-                ListNode next = cur1.next;
                 tail.next = cur1;
-                cur1.next = null;
-                tail = cur1;
-
-                cur1 = next;
-
+                cur1 = cur1.next;
             } else {
-                ListNode next = cur2.next;
                 tail.next = cur2;
-                cur2.next = null;
-                tail = cur2;
-                cur2 = next;
-
+                cur2 = cur2.next;
             }
+            tail = tail.next;
         }
 
         if (cur1 != null) {
