@@ -2,8 +2,12 @@ package com.demo.no09;
 
 import java.util.Arrays;
 
+/**
+ * 977. 有序数组的平方
+ */
 public class No977_1 {
     public int[] sortedSquares(int[] nums) {
+        //使用双指针，new 新的数组，前后做比较
         int[] arr = new int[nums.length];
         for (int i = 0, j = nums.length - 1, pos = nums.length - 1; i<=j; ) {
             if (nums[i] * nums[i] > nums[j] * nums[j]) {
